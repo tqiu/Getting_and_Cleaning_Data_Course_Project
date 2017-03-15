@@ -125,5 +125,5 @@ tidy_data <- cbind(subject_num, extract_name)
 ## Calculate the average of each variable for each subject and each activity
 tidy_data <- tidy_data %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 ## write the new data set to "tidy_data.txt" file
-write.table(tidy_data, file="tidy_data.txt")
+write.table(tidy_data, file="tidy_data.txt", row.names = FALSE)
 ```
